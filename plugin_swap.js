@@ -1,0 +1,11 @@
+jQuery.fn.swap_class = function(class1, class2) {
+    this.each(function() {
+        var $element = $(this);
+        if ($element.hasClass(class1)) {
+            $element.removeClass(class1).addClass(class2);
+        }
+        else if ($element.hasClass(class2)) {
+            $element.removeClass(class2).addClass(class1);
+        }
+    });
+};
